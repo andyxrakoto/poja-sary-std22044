@@ -41,17 +41,17 @@ Resources:
     Type: AWS::EFS::MountTarget
     Properties:
       FileSystemId: !Ref Filesystem
-      SubnetId: !Sub '{{resolve:ssm:/poja-sary-std22044/subnet1/id}}'
+      SubnetId: !Sub '{{resolve:ssm:/poja-sary/subnet1/id}}'
       SecurityGroups:
-        - !Sub '{{resolve:ssm:/poja-sary-std22044/sg/id}}'
+        - !Sub '{{resolve:ssm:/poja-sary/sg/id}}'
 
   MountTarget2:
     Type: AWS::EFS::MountTarget
     Properties:
       FileSystemId: !Ref Filesystem
-      SubnetId: !Sub '{{resolve:ssm:/poja-sary-std22044/subnet2/id}}'
+      SubnetId: !Sub '{{resolve:ssm:/poja-sary/subnet2/id}}'
       SecurityGroups:
-        - !Sub '{{resolve:ssm:/poja-sary-std22044/sg/id}}'
+        - !Sub '{{resolve:ssm:/poja-sary/sg/id}}'
 
 Outputs:
   AccessPointArnSSM:
